@@ -1,54 +1,26 @@
-@import "../../../variables";
+@import "scss-partials/grid-template";
 .container{
+  @include template;
   width: 70%;
-  justify-content: left;
-  display: grid;
   margin: 8%;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: min-content 2fr 1fr;
-  grid-gap: 40px;
-
+  justify-content: left;
   .whiteNoodles{
-    grid-row: 1 / 3;
-    grid-column: 1 / 2;
+    grid-row: start-white / end-white;
+    grid-column: start-white / end-white;
   }
   .content{
-    grid-row: 1 / 2;
-    grid-column: 2 / 3;
+    grid-row: start-content / end-content;
+    grid-column: start-content / end-content;
   }
   .mixMeal{
-    grid-row: 2 / 4;
-    grid-column: 2 / 3;
+    grid-row: start-mix / end-mix;
+    grid-column: start-mix / end-mix;
   }
   .onion{
-    grid-row: 3 / 4;
-    grid-column: 1 / 2;
+    grid-row: start-onion / end-onion;
+    grid-column: start-onion / end-onion;
     align-self: end;
     margin-top: 30px;
   }
-  @media screen and (max-width: $break-small) {
-    width: 90%;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(4, min-content);
-    margin-left: auto;
-    margin-right: auto;
-    .whiteNoodles{
-      grid-row: 1 / 2;
-      grid-column: 1 / 2;
-    }
-    .content{
-      grid-row: 2 / 3;
-      grid-column: 1 / 2;
-    }
-    .mixMeal{
-      grid-row: 3 / 4;
-      grid-column: 1 / 2;
-    }
-    .onion{
-      grid-row: 4 / 5;
-      grid-column: 1 / 2;
-      align-self: end;
-      margin-top: 30px;
-    }
-  }
+  @import "scss-partials/mobile";
 }

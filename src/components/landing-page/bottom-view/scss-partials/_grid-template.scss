@@ -1,0 +1,11 @@
+@mixin template {
+  display: grid;
+  grid-gap: 40px;
+  grid-template-columns:  [start-white start-onion] 1fr
+  [end-white end-onion start-content start-mix] 1fr
+  [end-content end-mix];
+  grid-template-rows: [start-white start-content] min-content
+  [end-content start-mix] 2fr
+  [end-white start-onion] 1fr
+  [end-mix end-onion];
+}
