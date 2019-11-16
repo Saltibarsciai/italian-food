@@ -6,10 +6,9 @@ import { ReactComponent as SignatureSVG } from '../../../../images/other/signatu
 const Content = () => {
     return (
         <div className={style.container}>
-            <div className={style.title}>Short Italian cooking lessons</div>
+            <div className={style.title}>Short Italian Cooking Lessons</div>
             <div className={style.signature}>
-                {/*<Signature/>*/}
-                <SignatureSVG/>
+                <SignatureSVG className={style.signature}/>
             </div>
             <div className={style.button}>
                 <Button value={'VIEW COURSES'} />

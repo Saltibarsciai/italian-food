@@ -1,0 +1,20 @@
+@mixin template {
+  display: grid;
+  grid-template-rows:
+          [header-start egg-start] 1.2fr
+          [header-end red-start] 0.7fr
+          [content-start] 1.5fr 3.5fr
+          [egg-end] 0.5fr
+          [ content-end yellow-start] 2.1fr
+          [paprika-start] 2.5fr
+          [yellow-end red-end] 2fr
+          [ grid-end];
+  grid-template-columns:
+          [red-start paprika-start] min-content
+          [red-end content-start header-start paprika-end] 3fr
+          [yellow-start] 0.5fr
+          [content-end egg-start header-end] min-content
+          [yellow-end] 100px
+          [grid-end];
+  grid-gap: 10px;
+}

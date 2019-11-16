@@ -1,12 +1,16 @@
+@import "../../variables";
 .courseBtn{
-  background-color: #BED392;
+  font-family: $text-font;
+  background-color: $secondary;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
   text-align: center;
-  height: 60px;
-  line-height: 60px;
-  vertical-align: middle;
-  padding: 0 30px;
+  letter-spacing: 0.396667px;
+  text-transform: uppercase;
+  padding: 20px 30px;
   &:hover{
-    background-color: #B0D33F;
     cursor: pointer;
   }
 }

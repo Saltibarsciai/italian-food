@@ -1,0 +1,42 @@
+@import "../../../../variables";
+@media screen and (max-width: $break-small) {
+  background-repeat: repeat;
+  background-position: initial;
+  background-size: 100% auto;
+  height: auto;
+  align-items: center;
+  grid-template-rows: repeat(6, min-content);
+  grid-template-columns: 1fr;
+  grid-template-areas:"head"
+                      "egg"
+                      "content"
+                      "red"
+                      "yellow"
+                      "paprika";
+  .header{
+    grid-area: head;
+    align-self: center;
+    justify-self: center;
+  }
+  .eggMeal{
+    grid-area: egg;
+  }
+  .content{
+    grid-area: content;
+    padding: 10px 20px 50px;
+  }
+  .redNoodles{
+    grid-area: red;
+  }
+  .yellowNoodles{
+    grid-area: yellow;
+  }
+  .paprika{
+    grid-area: paprika;
+    justify-self: left;
+    align-self: center;
+  }
+  & > *{
+    margin: 10px;
+  }
+}

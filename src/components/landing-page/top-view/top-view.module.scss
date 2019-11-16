@@ -1,31 +1,12 @@
-$break-small: 1200px;
+@import "scss-partials/_grid-template";
 .container{
-  display: grid;
-  grid-template-rows:
-          [header-start egg-start] 1.2fr
-          [header-end red-start] 0.7fr
-          [content-start] 1.5fr 3.5fr
-          [egg-end] 0.5fr
-          [ content-end yellow-start] 2.1fr
-          [paprika-start] 2.5fr
-          [yellow-end red-end] 2fr
-          [ grid-end];
-  grid-template-columns:
-          [red-start paprika-start] min-content
-          [red-end content-start header-start paprika-end] 3fr
-          [yellow-start] 0.5fr
-          [content-end egg-start header-end] min-content
-          [yellow-end] 100px
-          [grid-end];
-  grid-gap: 10px;
-
   background-image: url("../../../images/other/background.png");
   background-repeat: no-repeat;
   background-position: right top;
   background-size: 92% 88vh;
-
   width: 100%;
   height: 130vh;
+  @include template;
   .header{
     grid-row: header-start / header-end;
     grid-column: header-start / header-end;
@@ -55,46 +36,5 @@ $break-small: 1200px;
     justify-self: right;
     align-self: center;
   }
-  @media screen and (max-width: $break-small) {
-    background-repeat: repeat;
-    background-position: initial;
-    background-size: 100% auto;
-    height: auto;
-
-    grid-template-rows: repeat(6, min-content);
-    grid-template-columns: [start] 1fr [end];
-    grid-template-areas: "head"
-                         "egg"
-                         "content"
-                         "red"
-                         "yellow"
-                         "paprika";
-    align-items: center;
-    .header{
-      grid-area: head;
-      align-self: center;
-      justify-self: center;
-    }
-    .eggMeal{
-      grid-area: egg;
-    }
-    .content{
-      grid-area: content;
-      padding: 10px 20px 50px;
-    }
-    .redNoodles{
-      grid-area: red;
-    }
-    .yellowNoodles{
-      grid-area: yellow;
-    }
-    .paprika{
-      grid-area: paprika;
-      justify-self: left;
-      align-self: center;
-    }
-    & > *{
-      margin: 10px;
-    }
-  }
+  @import "scss-partials/mobile";
 }

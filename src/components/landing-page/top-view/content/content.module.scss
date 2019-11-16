@@ -1,4 +1,4 @@
-$break-small: 1200px;
+@import "../../../../variables";
 .container{
   display: flex;
   flex-direction: column;
@@ -8,13 +8,18 @@ $break-small: 1200px;
     margin-top: 20px;
   }
   .title{
-    font-weight: bold;
-    font-size: 60px;
     max-width: 600px;
     min-width: 300px;
-    text-align: center;
     align-self: center;
     word-break: break-word;
+    font-family: $title-font;
+
+    font-style: normal;
+    font-weight: bold;
+    font-size: 65px;
+    line-height: 87px;
+    text-align: center;
+    letter-spacing: 1.84167px;
   }
   .signature{
     align-self: flex-end;
@@ -25,6 +30,9 @@ $break-small: 1200px;
   @media screen and (max-width: $break-small) {
     .title{
       font-size: 40px;
+    }
+    .signature{
+      width: 200px;
     }
   }
 }

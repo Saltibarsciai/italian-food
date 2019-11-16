@@ -1,19 +1,21 @@
-$break-small: 1200px;
+@import "../../../variables";
 .container{
   display: flex;
   flex-direction: column;
   width: 70%;
-  margin-left: 10%;
+  margin-left: 8%;
   margin-top: 8%;
 
   & > *{
     margin-top: 20px;
   }
   .title{
+    font-style: normal;
+    font-weight: normal;
     font-size: 50px;
     line-height: 67px;
     letter-spacing: 0.816667px;
-    font-family: Playfair Display;
+    font-family: $title-font;
   }
   .signature{
     align-self: flex-end;

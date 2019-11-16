@@ -1,11 +1,11 @@
-$break-small: 1200px;
+@import "../../../variables";
 .container{
   width: 70%;
-  justify-content: center;
+  justify-content: left;
   display: grid;
-  margin: 10% auto;
+  margin: 8%;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 1fr 2fr 1fr;
+  grid-template-rows: min-content 2fr 1fr;
   grid-gap: 40px;
 
   .whiteNoodles{
