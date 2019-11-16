@@ -1,0 +1,13 @@
+.container{
+  width: 100%;
+  height: auto;
+  background-color: gray;
+  .item{
+    background-color: crimson;
+    padding: 10px;
+    margin: 5px;
+    &:hover{
+      background-color: yellow;
+    }
+  }
+}

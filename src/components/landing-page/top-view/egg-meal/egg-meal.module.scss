@@ -1,0 +1,9 @@
+$break-small: 1200px;
+.image{
+  width: 420px;
+  height: 370px;
+  @media screen and (max-width: $break-small) {
+    width: 100%;
+    height: auto;
+  }
+}
