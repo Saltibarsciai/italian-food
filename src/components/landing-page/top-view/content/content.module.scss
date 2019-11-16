@@ -29,10 +29,14 @@
   }
   @media screen and (max-width: $break-small) {
     .title{
-      font-size: 40px;
+      font-size: 35px;
+      line-height: 45px;
+      text-align: center;
+      letter-spacing: 0.850001px;
     }
     .signature{
       width: 200px;
+      align-self: center;
     }
   }
 }
