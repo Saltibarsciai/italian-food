@@ -1,42 +1,57 @@
 $break-small: 1200px;
 .container{
   display: grid;
-  grid-template-rows: 1.2fr 0.7fr 1.5fr 3.5fr 0.5fr 2.1fr 2.5fr 2fr;
-  grid-template-columns: min-content 3fr 0.5fr min-content 100px;
+  grid-template-rows:
+          [header-start egg-start] 1.2fr
+          [header-end red-start] 0.7fr
+          [content-start] 1.5fr 3.5fr
+          [egg-end] 0.5fr
+          [ content-end yellow-start] 2.1fr
+          [paprika-start] 2.5fr
+          [yellow-end red-end] 2fr
+          [ grid-end];
+  grid-template-columns:
+          [red-start paprika-start] min-content
+          [red-end content-start header-start paprika-end] 3fr
+          [yellow-start] 0.5fr
+          [content-end egg-start header-end] min-content
+          [yellow-end] 100px
+          [grid-end];
   grid-gap: 10px;
+
   background-image: url("../../../images/other/background.png");
   background-repeat: no-repeat;
   background-position: right top;
   background-size: 92% 88vh;
+
   width: 100%;
   height: 130vh;
-
   .header{
-    grid-row: 1 / 1;
-    grid-column: 2 / 4;
+    grid-row: header-start / header-end;
+    grid-column: header-start / header-end;
     align-self: center;
     justify-self: center;
   }
   .eggMeal{
-    grid-row: 1 / 4;
-    grid-column: 4 / -1;
+    grid-row: egg-start / egg-end;
+    grid-column: egg-start / grid-end;
   }
   .redNoodles{
-    grid-row: 2 / 7;
-    grid-column: 1 / 1;
+    grid-row: red-start / red-end;
+    grid-column: red-start / red-end;
   }
   .yellowNoodles{
-    grid-row: 6 / 8;
-    grid-column: 3 / 5;
+    grid-row: yellow-start / yellow-end;
+    grid-column: yellow-start / yellow-end;
   }
   .content{
-    grid-row: 3 / 5;
-    grid-column: 2 / 4;
+    grid-row: content-start / content-end;
+    grid-column: content-start / content-end;
     align-self: center;
   }
   .paprika{
-    grid-row: 7 / 9;
-    grid-column: 1 / 2;
+    grid-row: paprika-start / grid-end;
+    grid-column: paprika-start / paprika-end;
     justify-self: right;
     align-self: center;
   }
@@ -47,41 +62,39 @@ $break-small: 1200px;
     height: auto;
 
     grid-template-rows: repeat(6, min-content);
-    grid-template-columns: 1fr;
+    grid-template-columns: [start] 1fr [end];
+    grid-template-areas: "head"
+                         "egg"
+                         "content"
+                         "red"
+                         "yellow"
+                         "paprika";
     align-items: center;
-
-    & > *{
-      margin: 10px;
-    }
     .header{
-      grid-row: 1 / 2;
-      grid-column: 1 / 2;
+      grid-area: head;
       align-self: center;
       justify-self: center;
     }
     .eggMeal{
-      grid-row: 2 / 3;
-      grid-column: 1 / 2;
+      grid-area: egg;
     }
     .content{
-      grid-row: 3 / 4;
-      grid-column: 1 / 2;
-      padding: 50px;
+      grid-area: content;
+      padding: 10px 20px 50px;
     }
     .redNoodles{
-      grid-row: 4 / 5;
-      grid-column: 1 / 2;
+      grid-area: red;
     }
     .yellowNoodles{
-      grid-row: 5 / 6;
-      grid-column: 1 / 2;
+      grid-area: yellow;
     }
-
     .paprika{
-      grid-row: 6 / 7;
-      grid-column: 1 / 2;
+      grid-area: paprika;
       justify-self: left;
       align-self: center;
+    }
+    & > *{
+      margin: 10px;
     }
   }
 }
