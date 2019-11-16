@@ -1,0 +1,31 @@
+$break-small: 1200px;
+.container{
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  margin-left: 10%;
+  margin-top: 8%;
+
+  & > *{
+    margin-top: 20px;
+  }
+  .title{
+    font-size: 50px;
+    line-height: 67px;
+    letter-spacing: 0.816667px;
+    font-family: Playfair Display;
+  }
+  .signature{
+    align-self: flex-end;
+  }
+  .brand{
+    align-self: flex-end;
+  }
+  @media screen and (max-width: $break-small) {
+    .title{
+      font-size: 30px;
+      letter-spacing: 0.216667px;
+      line-height: 40px;
+    }
+  }
+}

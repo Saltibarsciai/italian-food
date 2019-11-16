@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from '../../images/meals/egg-meal.png'
+import logo from '../../../../images/meals/egg-meal.png'
 import style from './egg-meal.module.scss'
 
 const EggMeal = () => {

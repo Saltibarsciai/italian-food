@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from '../../images/meals/white-noodles.png'
+import logo from '../../../../images/meals/white-noodles.png'
 import style from './white-noodles.module.scss'
 
 const WhiteNoodles = () => {

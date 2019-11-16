@@ -1,13 +1,87 @@
+$break-small: 1200px;
 .container{
+  display: grid;
+  grid-template-rows: 1.2fr 0.7fr 1.5fr 3.5fr 0.5fr 2.1fr 2.5fr 2fr;
+  grid-template-columns: min-content 3fr 0.5fr min-content 100px;
+  grid-gap: 10px;
+  background-image: url("../../../images/other/background.png");
+  background-repeat: no-repeat;
+  background-position: right top;
+  background-size: 92% 88vh;
   width: 100%;
-  height: auto;
-  background-color: gray;
-  .item{
-    background-color: crimson;
-    padding: 10px;
-    margin: 5px;
-    &:hover{
-      background-color: yellow;
+  height: 130vh;
+
+  .header{
+    grid-row: 1 / 1;
+    grid-column: 2 / 4;
+    align-self: center;
+    justify-self: center;
+  }
+  .eggMeal{
+    grid-row: 1 / 4;
+    grid-column: 4 / -1;
+  }
+  .redNoodles{
+    grid-row: 2 / 7;
+    grid-column: 1 / 1;
+  }
+  .yellowNoodles{
+    grid-row: 6 / 8;
+    grid-column: 3 / 5;
+  }
+  .content{
+    grid-row: 3 / 5;
+    grid-column: 2 / 4;
+    align-self: center;
+  }
+  .paprika{
+    grid-row: 7 / 9;
+    grid-column: 1 / 2;
+    justify-self: right;
+    align-self: center;
+  }
+  @media screen and (max-width: $break-small) {
+    background-repeat: repeat;
+    background-position: initial;
+    background-size: 100% auto;
+    height: auto;
+
+    grid-template-rows: repeat(6, min-content);
+    grid-template-columns: 1fr;
+    align-items: center;
+
+    & > *{
+      margin: 10px;
+    }
+    .header{
+      grid-row: 1 / 2;
+      grid-column: 1 / 2;
+      align-self: center;
+      justify-self: center;
+    }
+    .eggMeal{
+      grid-row: 2 / 3;
+      grid-column: 1 / 2;
+    }
+    .content{
+      grid-row: 3 / 4;
+      grid-column: 1 / 2;
+      padding: 50px;
+    }
+    .redNoodles{
+      grid-row: 4 / 5;
+      grid-column: 1 / 2;
+    }
+    .yellowNoodles{
+      grid-row: 5 / 6;
+      grid-column: 1 / 2;
+    }
+
+    .paprika{
+      grid-row: 6 / 7;
+      grid-column: 1 / 2;
+      justify-self: left;
+      align-self: center;
     }
   }
 }
