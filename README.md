@@ -5,7 +5,7 @@
 
 Created with React and Scss modules.
 
-demo: https://inspiring-albattani-57ed6d.netlify.com/
+demo: https://dominic.lt
 
 ## Getting Started
 
