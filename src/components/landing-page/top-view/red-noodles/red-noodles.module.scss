@@ -1,9 +1,10 @@
-$break-small: 1200px;
+@import "../../../../variables";
 .image{
   width: 420px;
   height: 590px;
- @media screen and (max-width: $break-small) {
-  width: 100%;
-  height: auto;
- }
+
+   @media screen and (max-width: $break-small) {
+    width: 100%;
+    height: auto;
+   }
 }

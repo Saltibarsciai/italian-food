@@ -7,20 +7,20 @@ import Content from "./content/content";
 
 const BottomView = () => {
     return (
-        <div className={style.container}>
-            <div className={style.whiteNoodles}>
+        <section className={style.container}>
+            <figure className={style.whiteNoodles}>
                 <WhiteNoodles/>
-            </div>
-            <div className={style.content}>
+            </figure>
+            <article className={style.content}>
                 <Content/>
-            </div>
-            <div className={style.mixMeal}>
+            </article>
+            <figure className={style.mixMeal}>
                 <MixMeal/>
-            </div>
-            <div className={style.onion}>
+            </figure>
+            <figure className={style.onion}>
                 <OnionSVG/>
-            </div>
-        </div>
+            </figure>
+        </section>
     );
 };
 

@@ -4,7 +4,7 @@ import style from './egg-meal.module.scss'
 
 const EggMeal = () => {
     return (
-        <img className={style.image} src={logo} alt=""/>
+        <img className={style.image} src={logo} alt="meal with eggs"/>
     );
 };
 

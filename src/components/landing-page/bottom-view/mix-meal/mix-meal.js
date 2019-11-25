@@ -4,7 +4,7 @@ import logo from '../../../../images/meals/mix-meal.png'
 
 const MixMeal = props => {
     return (
-        <img className={style.mixMeal} src={logo} alt=""/>
+        <img className={style.mixMeal} src={logo} alt="mixed meal"/>
     );
 };
 

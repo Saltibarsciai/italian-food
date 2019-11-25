@@ -5,6 +5,7 @@
   margin: 8%;
   justify-content: left;
   .whiteNoodles{
+    margin: 0;
     grid-row: start-white / end-white;
     grid-column: start-white / end-white;
   }
@@ -13,6 +14,7 @@
     grid-column: start-content / end-content;
   }
   .mixMeal{
+    margin: 0;
     grid-row: start-mix / end-mix;
     grid-column: start-mix / end-mix;
   }
@@ -20,7 +22,7 @@
     grid-row: start-onion / end-onion;
     grid-column: start-onion / end-onion;
     align-self: end;
-    margin-top: 30px;
+    margin: 30px 0 0;
   }
   @import "scss-partials/mobile";
 }

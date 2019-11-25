@@ -6,17 +6,17 @@ import Title from "./title/title";
 
 const MiddleView = () => {
     return (
-        <div className={style.container}>
-            <div className={style.title}>
+        <section className={style.container}>
+            <article className={style.title}>
                 <Title/>
-            </div>
-            <div className={style.signature}>
+            </article>
+            <figure className={style.signature}>
                 <SignatureSVG width={'100%'}/>
-            </div>
-            <div className={style.brand}>
+            </figure>
+            <figure className={style.brand}>
                 <BrandSVG/>
-            </div>
-        </div>
+            </figure>
+        </section>
     );
 };
 

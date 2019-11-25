@@ -4,7 +4,7 @@ import style from './yellow-noodles.module.scss'
 
 const YellowNoodles = () => {
     return (
-        <img className={style.image} src={logo} alt=""/>
+        <img className={style.image} src={logo} alt="yellow noodles"/>
     );
 };
 

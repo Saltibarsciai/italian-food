@@ -4,9 +4,9 @@ import style from './button.module.scss'
 
 const Button = props => {
     return (
-        <div className={style.courseBtn}>
+        <button className={style.courseBtn}>
             {props.value}
-        </div>
+        </button>
     );
 };
 

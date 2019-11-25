@@ -10,7 +10,12 @@
   letter-spacing: 0.396667px;
   text-transform: uppercase;
   padding: 20px 30px;
+  outline: none;
+  cursor: pointer;
+  border: 0;
+
   &:hover{
-    cursor: pointer;
+    background-color: lighten($secondary, 10%);
+    transition: 0.2s;
   }
 }

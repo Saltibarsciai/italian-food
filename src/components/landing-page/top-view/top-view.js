@@ -9,26 +9,26 @@ import EggMeal from "./egg-meal/egg-meal";
 
 const TopView = () => {
     return (
-        <div className={style.container}>
-            <div className={style.header}>
+        <section className={style.container}>
+            <figure className={style.header}>
                 <BrandSVG/>
-            </div>
-            <div className={style.eggMeal}>
+            </figure>
+            <figure className={style.eggMeal}>
                 <EggMeal/>
-            </div>
-            <div className={style.redNoodles}>
+            </figure>
+            <figure className={style.redNoodles}>
                 <RedNoodles/>
-            </div>
-            <div className={style.yellowNoodles}>
+            </figure>
+            <figure className={style.yellowNoodles}>
                 <YellowNoodles/>
-            </div>
+            </figure>
             <div className={style.content}>
                 <Content/>
             </div>
-            <div className={style.paprika}>
+            <figure className={style.paprika}>
                 <PaprikaSVG/>
-            </div>
-        </div>
+            </figure>
+        </section>
     );
 };
 

@@ -8,20 +8,24 @@
   height: 130vh;
   @include template;
   .header{
+    margin: 0;
     grid-row: header-start / header-end;
     grid-column: header-start / header-end;
     align-self: center;
     justify-self: center;
   }
   .eggMeal{
+    margin: 0;
     grid-row: egg-start / egg-end;
     grid-column: egg-start / grid-end;
   }
   .redNoodles{
+    margin: 0;
     grid-row: red-start / red-end;
     grid-column: red-start / red-end;
   }
   .yellowNoodles{
+    margin: 0;
     grid-row: yellow-start / yellow-end;
     grid-column: yellow-start / yellow-end;
   }
@@ -31,6 +35,7 @@
     align-self: center;
   }
   .paprika{
+    margin: 0;
     grid-row: paprika-start / grid-end;
     grid-column: paprika-start / paprika-end;
     justify-self: right;
